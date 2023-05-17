@@ -21,7 +21,7 @@ let personalMovieDB = {
 function rememberMyFilms() {
   let s = true;
   while (s) {
-    let newMovieName = prompt('One of last films?', '');
+    let newMovieName = prompt('One of last films?', '').trim();
     if (
       newMovieName == '' ||
       newMovieName == null ||
