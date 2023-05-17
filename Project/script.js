@@ -48,7 +48,7 @@ rememberMyFilms();
 
 function detectPersonalLevel() {
   if (personalMovieDB.count < 10) {
-    alert("You haven't watched a lot of movies");
+    alert('You haven\'t watched a lot of movies');
   } else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
     alert('You are classic viewer');
   } else if (personalMovieDB.count > 30) {
