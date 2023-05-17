@@ -45,7 +45,7 @@ let personalMovieDB = {
   },
   detectPersonalLevel: function () {
     if (this.count < 10) {
-      alert('You haven\'t watched a lot of movies');
+      alert("You haven't watched a lot of movies");
     } else if (10 <= this.count && this.count <= 30) {
       alert('You are classic viewer');
     } else if (this.count > 30) {
@@ -70,6 +70,9 @@ let personalMovieDB = {
       personalMovieDB.genres[i - 1] = newGenre;
       s = confirm('Add new genre?');
     }
+    this.genres.forEach((value, i) =>
+      console.log(`Favourite genre #${i+1} - ${value}`)
+    );
   },
   toggleVisibleMyDB: function () {
     this.privat = !this.privat;
@@ -81,9 +84,3 @@ personalMovieDB.rememberMyFilms();
 personalMovieDB.detectPersonalLevel();
 personalMovieDB.showMyDB();
 personalMovieDB.writeYourGenres();
-
-alert(personalMovieDB.privat);
-personalMovieDB.toggleVisibleMyDB();
-alert(personalMovieDB.privat);
-personalMovieDB.toggleVisibleMyDB();
-alert(personalMovieDB.privat);
